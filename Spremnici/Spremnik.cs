@@ -37,6 +37,45 @@ namespace Spremnici
         {
             return naziv;
         }
-        
+        public void dodaj(int komada)
+        {
+            if (popunjenost+komada > kapacitet)
+            {
+                System.ArgumentException popunjenSpremnik = new System.ArgumentException("Spremnik je popunjen");
+                throw popunjenSpremnik;
+            }
+            else
+            {
+                if (komada < 1 || komada > 3)
+                {
+                    System.ArgumentException kriviBrojKomada = new System.ArgumentException("Dodali ste previše ili premalo komada");
+                    throw kriviBrojKomada;
+                }
+                else
+                {
+                    popunjenost += komada;
+                }
+            }
+        }
+        public void isprazni(int komada)
+        {
+        if (popunjenost-komada < 0)
+            {
+                System.ArgumentException prazanSpremnik = new System.ArgumentException("Spremnik je prazan")
+                    throw prazanSpremnik;
+            }
+            else
+            {
+                if (komada < 1 || komada > 3)
+                {
+                    System.ArgumentException kriviBrojPraznjenjaKomada = new System.ArgumentException("Prazni se previše ili premalo komada");
+                    throw kriviBrojPraznjenjaKomada;
+                }
+                else
+                {
+                    popunjenost -= komada;
+                }
+            }
+                    }
     }
 }
