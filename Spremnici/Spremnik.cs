@@ -60,8 +60,8 @@ namespace Spremnici
         public void isprazni(int komada)
         {
         if (popunjenost-komada < 0)
-            {
-                System.ArgumentException prazanSpremnik = new System.ArgumentException("Spremnik je prazan")
+        {
+            System.ArgumentException prazanSpremnik = new System.ArgumentException("Spremnik je prazan");
                     throw prazanSpremnik;
             }
             else
