@@ -76,6 +76,11 @@ namespace Spremnici
                     popunjenost -= komada;
                 }
             }
-                    }
+        }
+        
+        public override string ToString()
+        {
+            return "Spremnik Naziv: " + naziv + " Kapacitet: " + kapacitet.ToString() + " Popunjenost: " + popunjenost.ToString();
+        }
     }
 }
